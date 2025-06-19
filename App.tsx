@@ -1,12 +1,33 @@
 import React, { useState } from "react";
 import {View, Text} from "react-native";
 import Landing from "./src/Pages/Landing";
+import Login from "./src/Pages/Login";
+import Signup from "./src/Pages/Signup";
 
 export default () => {
+  const [currentScreen, setCurrentScreen] = useState('Landing');
+
+  const navigation = {
+    navigate: (screenName: string) => {
+      setCurrentScreen(screenName);
+    }
+  };
+
+  const renderScreen = () => {
+    switch(currentScreen) {
+      case 'Login':
+        return <Login navigation={navigation} />;
+      case 'Signup':
+        return <Signup navigation={navigation} />;
+      case 'Landing':
+      default:
+        return <Landing navigation={navigation} />;
+    }
+  };
+
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-        <Landing navigation={undefined} />
-        
+    <View className="flex-1">
+      {renderScreen()}
     </View>
   );
 };

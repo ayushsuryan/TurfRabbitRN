@@ -1,3 +1,17 @@
+import React, { useState } from "react";
+import {View, Text} from "react-native";
+import Landing from "./src/Pages/Landing";
+
+export default () => {
+  return (
+    <View className="flex-1 items-center justify-center bg-white">
+        <Landing navigation={undefined} />
+        
+    </View>
+  );
+};
+
+
 // import {
 //   ViroARScene,
 //   ViroARSceneNavigator,
@@ -5,8 +19,8 @@
 //   ViroTrackingReason,
 //   ViroTrackingStateConstants,
 // } from "@reactvision/react-viro";
-import React, { useState } from "react";
-import { StyleSheet, View, Text} from "react-native";
+// import React, { useState } from "react";
+// import { StyleSheet } from "react-native";
 
 // const HelloWorldSceneAR = () => {
 //   const [text, setText] = useState("Initializing AR...");
@@ -32,14 +46,25 @@ import { StyleSheet, View, Text} from "react-native";
 //   );
 // };
 
-export default () => {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
-  );
-};
+// export default () => {
+//   return (
+//     <ViroARSceneNavigator
+//       autofocus={true}
+//       initialScene={{
+//         scene: HelloWorldSceneAR,
+//       }}
+//       style={styles.f1}
+//     />
+//   );
+// };
 
-
+// var styles = StyleSheet.create({
+//   f1: { flex: 1 },
+//   helloWorldTextStyle: {
+//     fontFamily: "Arial",
+//     fontSize: 30,
+//     color: "#ffffff",
+//     textAlignVertical: "center",
+//     textAlign: "center",
+//   },
+// });

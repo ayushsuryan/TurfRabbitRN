@@ -3,6 +3,7 @@ import {View, Text} from "react-native";
 import Landing from "./src/Pages/Landing";
 import Login from "./src/Pages/Login";
 import Signup from "./src/Pages/Signup";
+import ARScene from "./src/Pages/ARScene";
 
 export default () => {
   const [currentScreen, setCurrentScreen] = useState('Landing');
@@ -19,6 +20,8 @@ export default () => {
         return <Login navigation={navigation} />;
       case 'Signup':
         return <Signup navigation={navigation} />;
+      case 'ARScene':
+        return <ARScene navigation={navigation} />;
       case 'Landing':
       default:
         return <Landing navigation={navigation} />;

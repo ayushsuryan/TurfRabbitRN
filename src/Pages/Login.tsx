@@ -14,6 +14,9 @@ const Login = ({ navigation }: { navigation: any }) => {
 
   const handleLogin = () => {
     console.log('Login pressed');
+    if (navigation) {
+      navigation.navigate('ARScene');
+    }
   };
 
   const handleSignupPress = () => {

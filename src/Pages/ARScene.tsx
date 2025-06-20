@@ -14,7 +14,7 @@ import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 
 ViroMaterials.createMaterials({
-  chairMaterial: {
+  treeMaterial: {
     roughness: 0.5,
     metalness: 0.1,
     diffuseColor: "#8B4513",
@@ -34,9 +34,9 @@ const HelloWorldSceneAR = () => {
   }
 
   function onPlaneSelected() {
-    console.log("Plane selected - placing chair");
+    console.log("Plane selected - placing tree");
     setPlaneSelected(true);
-    setText("Chair placed! Move around to see it from different angles");
+    setText("Tree placed! Move around to see it from different angles");
   }
 
   function onAnchorFound(anchor: any) {
@@ -82,11 +82,11 @@ const HelloWorldSceneAR = () => {
       >
         {planeSelected && (
           <Viro3DObject
-            source={require("../../assets/chair.glb")}
-            position={[0, 0, 0]}
-            scale={[0.3, 0.3, 0.3]}
+            source={require("../../assets/tree.glb")}
+            position={[0, 0, 0]}  
+            scale={[7, 7, 7]}
             type="GLB"
-            materials={["chairMaterial"]}
+            materials={["treeMaterial"]}
             animation={{
               name: "01",
               run: true,
